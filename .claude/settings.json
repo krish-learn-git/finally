@@ -1,15 +1,19 @@
 {
-    "hooks": {
-        "Stop": [
-            {
-                "hooks": [
-                    {
-                        "type": "agent",
-                        "prompt": "Carry out a review of all changes since last commit and write results to the end of a file named planning/REVIEW.md",
-                        "timeout": 240
-                    }
-                ]
-            }
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "teammateMode": "in-process",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "agent",
+            "prompt": "Carry out a review of all changes since last commit and write results to the end of a file named planning/REVIEW.md",
+            "timeout": 240
+          }
         ]
-    }
+      }
+    ]
+  }
 }
